@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="stefa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-07 01:26:50 "/>
+        <attribute name="created" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjA3OjI4OjM5ICI7Mjc2MQ=="/>
+        <attribute name="edited" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDc7IjAxOjI2OjUwICI7MTA7MjkwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="side1" type="Integer" array="False" size=""/>
+            <declare name="side2" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire misura primo lato: &quot;" newline="True"/>
+            <input variable="side1"/>
+            <output expression="&quot;Inserire misura secondo lato: &quot;" newline="True"/>
+            <input variable="side2"/>
+            <declare name="area" type="Integer" array="False" size=""/>
+            <assign variable="area" expression="side1*side2"/>
+            <declare name="rest" type="Integer" array="False" size=""/>
+            <assign variable="rest" expression="area%200"/>
+            <declare name="white" type="Integer" array="False" size=""/>
+            <declare name="black" type="Integer" array="False" size=""/>
+            <assign variable="white" expression="area/200"/>
+            <if expression="rest==0">
+                <then>
+                    <assign variable="black" expression="white"/>
+                    <output expression="&quot;Necessario uguale numero di piastrelle bianche e nere: &quot; &amp; white" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="black" expression="white+1"/>
+                    <output expression="&quot;Necessarie &quot; &amp; black &amp; &quot; piastrelle di un colore e &quot; &amp; white &amp; &quot; di un altro&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

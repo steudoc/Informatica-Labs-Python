@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="stefa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-06 10:40:50 "/>
+        <attribute name="created" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjEwOjE3OjQ5ICI7Mjc1NA=="/>
+        <attribute name="edited" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjEwOjQwOjUwICI7NDsyODUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start1" type="Integer" array="False" size=""/>
+            <declare name="end1" type="Integer" array="False" size=""/>
+            <declare name="start2" type="Integer" array="False" size=""/>
+            <declare name="end2" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <declare name="e" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire orario inizio appuntamento 1: &quot;" newline="True"/>
+            <input variable="start1"/>
+            <output expression="&quot;Inserire orario fine primo appuntamento: &quot;" newline="True"/>
+            <input variable="end1"/>
+            <output expression="&quot;Inserire orario inizio appuntamento 2: &quot;" newline="True"/>
+            <input variable="start2"/>
+            <output expression="&quot;Inserire orario fine secondo appuntamento: &quot;" newline="True"/>
+            <input variable="end2"/>
+            <if expression="start1&gt;start2">
+                <then>
+                    <assign variable="s" expression="start1"/>
+                </then>
+                <else>
+                    <assign variable="s" expression="start2"/>
+                </else>
+            </if>
+            <if expression="end1&gt;end2">
+                <then>
+                    <assign variable="e" expression="end1"/>
+                </then>
+                <else>
+                    <assign variable="e" expression="end2"/>
+                </else>
+            </if>
+            <if expression="s&lt;e">
+                <then>
+                    <output expression="&quot;Gli appuntamenti si sovrappongono&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Gli appuntamenti non si sovrappongono&quot;" newline="True"/>
+                </else>
+            </if>
+            <comment text=""/>
+        </body>
+    </function>
+</flowgorithm>

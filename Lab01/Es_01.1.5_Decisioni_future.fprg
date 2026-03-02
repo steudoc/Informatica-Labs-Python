@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="stefa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-07 09:35:13 "/>
+        <attribute name="created" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDc7IjAxOjI3OjA3ICI7Mjc1MA=="/>
+        <attribute name="edited" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDc7IjA5OjM1OjEzICI7MTI7MjkxMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire numero di facolt&#224; da analizzare: &quot;" newline="True"/>
+            <input variable="number"/>
+            <declare name="occupation" type="Integer" array="False" size=""/>
+            <assign variable="occupation" expression="0"/>
+            <declare name="salary" type="Integer" array="False" size=""/>
+            <assign variable="salary" expression="0"/>
+            <declare name="variable" type="Integer" array="False" size=""/>
+            <declare name="facultyOccupation" type="Integer" array="False" size=""/>
+            <declare name="facultySalary" type="Integer" array="False" size=""/>
+            <for variable="k" start="0" end="number-1" direction="inc" step="1">
+                <output expression="&quot;Inserire stime occupazionali facolt&#224; &quot; &amp; k+1 &amp; &quot;: &quot;" newline="True"/>
+                <input variable="variable"/>
+                <if expression="variable&gt;occupation">
+                    <then>
+                        <assign variable="occupation" expression="variable"/>
+                        <assign variable="facultyOccupation" expression="k+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Inserire salario medio primo anno lavorativo facolt&#224;&quot; &amp; k+1 &amp; &quot;: &quot;" newline="True"/>
+                <input variable="variable"/>
+                <if expression="variable&gt;salary">
+                    <then>
+                        <assign variable="salary" expression="variable"/>
+                        <assign variable="facultySalary" expression="k+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Migliore universit&#224; in base alla percentuale occupazionale: &quot; &amp; facultyOccupation &amp; &quot; (&quot; &amp; occupation &amp; &quot;%)&quot;" newline="True"/>
+            <output expression="&quot;Migliore universit&#224; in base al salario medio nel primo anno lavorativo: &quot; &amp; facultySalary &amp; &quot; (&quot; &amp; salary &amp; &quot;)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

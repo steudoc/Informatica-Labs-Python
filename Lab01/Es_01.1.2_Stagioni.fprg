@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="stefa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-06 10:55:14 "/>
+        <attribute name="created" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjEwOjQyOjMzICI7Mjc0NQ=="/>
+        <attribute name="edited" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjEwOjU1OjE0ICI7MzsyODU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <declare name="stagione" type="String" array="False" size=""/>
+            <declare name="day" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire mese: &quot;" newline="True"/>
+            <input variable="month"/>
+            <output expression="&quot;Inserire giorno&quot;" newline="True"/>
+            <input variable="day"/>
+            <if expression="month&lt;4">
+                <then>
+                    <assign variable="stagione" expression="&quot;Winter&quot;"/>
+                </then>
+                <else>
+                    <if expression="month&lt;7">
+                        <then>
+                            <assign variable="stagione" expression="&quot;Spring&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="month&lt;10">
+                                <then>
+                                    <assign variable="stagione" expression="&quot;Summer&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="stagione" expression="&quot;Fall&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <assign variable="r" expression="month%3"/>
+            <if expression="r==0">
+                <then>
+                    <if expression="day&gt;=21">
+                        <then>
+                            <if expression="stagione==&quot;Winter&quot;">
+                                <then>
+                                    <assign variable="stagione" expression="&quot;Spring&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="stagione==&quot;Spring&quot;">
+                                        <then>
+                                            <assign variable="stagione" expression="&quot;Summer&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="stagione==&quot;Summer&quot;">
+                                                <then>
+                                                    <assign variable="stagione" expression="&quot;Fall&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="stagione" expression="&quot;Winter&quot;"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Stagione: &quot; &amp; stagione" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

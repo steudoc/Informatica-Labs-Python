@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="stefa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-07 09:56:48 "/>
+        <attribute name="created" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDc7IjA5OjM3OjIzICI7Mjc1Nw=="/>
+        <attribute name="edited" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDc7IjA5OjU2OjQ4ICI7MTE7MjkyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Real" array="False" size=""/>
+            <declare name="radice" type="Real" array="False" size=""/>
+            <assign variable="n" expression="1.75"/>
+            <assign variable="radice" expression="0.5*(n+3/n)"/>
+            <output expression="radice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

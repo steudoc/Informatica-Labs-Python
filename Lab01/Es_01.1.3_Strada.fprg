@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="stefa"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-06 07:28:20 "/>
+        <attribute name="created" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjEwOjU2OjAyICI7Mjc0Ng=="/>
+        <attribute name="edited" value="c3RlZmE7TEFQVE9QLTNMRzVKS0oyOzIwMjItMTAtMDY7IjA3OjI4OjIwICI7MTI7MjkwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="distance" type="Integer" array="False" size=""/>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <declare name="km" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserire distanza casa-lavoro: &quot;" newline="True"/>
+            <input variable="distance"/>
+            <output expression="&quot;Chilometri registrati: &quot;" newline="True"/>
+            <input variable="km"/>
+            <output expression="&quot;Inserire giorni di lavoro: &quot;" newline="True"/>
+            <input variable="days"/>
+            <declare name="work" type="Integer" array="False" size=""/>
+            <assign variable="work" expression="distance*days*2"/>
+            <declare name="personal" type="Integer" array="False" size=""/>
+            <assign variable="personal" expression="km-work"/>
+            <declare name="perWork" type="Real" array="False" size=""/>
+            <assign variable="perWork" expression="(work*100)/km"/>
+            <declare name="perPersonal" type="Real" array="False" size=""/>
+            <assign variable="perPersonal" expression="(personal*100)/km"/>
+            <output expression="&quot;Percentuale utilizzo personale: &quot; &amp; perPersonal &amp; &quot;%&quot;" newline="True"/>
+            <output expression="&quot;Percentuale uso lavorativo: &quot; &amp; perWork &amp; &quot;%&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
