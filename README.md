@@ -1,4 +1,4 @@
-# Computer Science Fundamentals - Laboratory Exercises
+# Computer Science Fundamentals
 
 ![Computer Science Laboratories Banner](./cover.svg)
 
