@@ -2,12 +2,12 @@
 
 ![Computer Science Laboratories Banner](./cover.svg)
 
-## 📖 Description
+## Description
 A comprehensive collection of Python laboratory assignments developed for the **Informatica** course during my Bachelor's Degree in Computer Engineering at **Politecnico di Torino**. The repository showcases foundational computer science competencies, focusing on algorithmic thinking, clean procedural programming, core data structure design, and robust file I/O data processing.
 
 ---
 
-## 📌 Core Competencies & Topics Covered
+## Core Competencies & Topics Covered
 
 * **Algorithmic Logic & Control Flow:** Conditional branching, complex iterative routines, and edge-case handling.
 * **Data Structures:** Hands-on manipulation of native Python collections, including lists, tuples, sets, and dictionaries.
@@ -17,10 +17,10 @@ A comprehensive collection of Python laboratory assignments developed for the **
 
 ---
 
-## 🛠️ Technologies & Tools
+## Technologies & Tools
 
 * **Language:** Python 3.x
 * **Standard Libraries:** `sys`, `math`, `csv`, `string`, `random`
-* **Development Tools:** VS Code, Git
+* **Development Tools:** VS Code
 
 ---
